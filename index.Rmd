@@ -1,6 +1,6 @@
 ---
-title: "Guangchuang Yu's CV"
-author: Guangchuang Yu
+title: "Zhongping Xu's CV"
+author: Zhongping Xu
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -68,77 +68,9 @@ sanitize_links <- function(text){
 }
 
 
-cp2012 <- function() {
-  cat("\n\n::: aside\n\n")
-  cat("![](figures/2021年中国科技论文统计报告发布会-高被引论文-截屏.png){width=100%}\n\n")
-  clusterProfiler <- "clusterProfiler (Yu et al. 2012)"
-  url <- "https://doi.org/10.1089/omi.2011.0118"
-  clusterProfiler2012 <- glue("[{clusterProfiler}]({url})")
-
-  glue(
-    "{clusterProfiler2012} 被中国科学技术信息研究所列为“2011-2021我国高被引论文中被引次数最高的10篇国际论文”（2021年中国科技论文统计报告）" 
-  ) %>% print()
-
-  cat("\n\n:::\n\n")
-}
-
-
-cp2021 <- function() {
-  cat("\n\n::: aside\n\n")
-  cat("![](figures/cell+press-screenshot-2021-08-24.jpg){width=100%}\n\n")
-
-  clusterProfiler4 <- "clusterProfiler (Wu et al. 2021)"
-  url <- "https://doi.org/10.1016/j.xinn.2021.100141"
-  clusterProfiler2021 <- glue("[{clusterProfiler4}]({url})")
-
-  glue(
-    "{clusterProfiler2021}, the featured article in 2021-08-24's website banner of Cell Press" 
-  ) %>% print()
-
-  cat("\n\n:::\n\n")
-}
-
-
-
-ggtree2017 <- function() {
-  cat("\n\n::: aside\n\n")
-  cat("![](figures/10th-anniversary-logo-2.png){width=100%}\n\n")
-
-  # ggtree <- "ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data"
-  ggtree <- "ggtree (Yu et al. 2017)"
-  url <- 'http://onlinelibrary.wiley.com/doi/10.1111/2041-210X.12628/abstract'
-
-  ggtree2 <- glue("[{ggtree}]({url})")
-  journal <- "**_Methods in Ecology and Evolution_**"
-
-  url2 <- "https://methodsblog.com/2020/11/19/ggtree-tree-visualization/"
-  journal2 <- glue("[{journal}]({url2})")
-
-  glue(
-    " 
-    The {ggtree2} paper was selected as a feature article to celebrate the 10^th^ anniversary of the launch of {journal2}.
-    "
-  ) %>% print()
-
-  cat("\n\n:::\n\n")
-}
-
-
-
 # Takes a single row of dataframe corresponding to a position
 # turns it into markdown, and prints the result to console.
 build_position_from_df <- function(pos_df){
-  
-
-  if (grepl("clusterProfiler", pos_df$title) && grepl("OMICS", pos_df$loc)) {
-    cp2012()
-  }
-
-
-  if (grepl("clusterProfiler", pos_df$title) && grepl("Innovation", pos_df$loc)) {
-    cp2021()
-  }
-
 
   missing_start <- pos_df$start == 'N/A'
   dates_same <- pos_df$end == pos_df$start
@@ -247,7 +179,7 @@ Aside
 ================================================================================
 
 
-![logo](ygc.png){width=100%}
+![logo](xzp.jpg){width=100%}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
@@ -260,12 +192,11 @@ Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> gcyu1@smu.edu.cn
-- <i class="fa fa-twitter"></i> guangchuangyu
-- <i class="fa fa-github"></i> github.com/YuLab-SMU
-- <i class="fa fa-link"></i> https://yulab-smu.top/
-- <i class="fa fa-weixin"></i> YuLabSMU (公众号)
-- <i class="fa fa-phone"></i> +86-20-61648632
+- <i class="fa fa-envelope"></i> xzp@mail.hzau.edu.cn
+- <i class="fa fa-twitter"></i> hopetogy
+- <i class="fa fa-github"></i> github.com/tiramisutes
+- <i class="fa fa-link"></i> http://tiramisutes.github.io/
+- <i class="fa fa-phone"></i> +86-13296646985
 
 <br>
 
@@ -302,7 +233,7 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Guangchuang Yu {#title}
+Zhongping Xu {#title}
 --------------------------------------------------------------------------------
 
 
@@ -319,11 +250,7 @@ Guangchuang Yu {#title}
 
 <!-- I am broadly interested in bioinformatics, metagenomics, molecular evolution, data integration and visualization. -->
 
-Professor and dean of the Department of Bioinformatics, School of Basic Medicine, Southern Medical University. My research group has been focusing on the development and application of bioinformatics methods and tools, and has developed a number of widely recognized bioinformatics tools in phylogeny, omics data analysis, and data visualization to help biologists explore and understand data. 
-
-教授、博导，现任南方医科大学基础医学院生物信息学系系主任。
-
-课题组一直专注于生物信息学方法工具开发及应用，在系统发育、组学数据分析和数据可视化上开发了多款广受同行认可的生物信息学工具，帮助生物学家探索和理解数据。
+Post-Doctoral of the Huazhong Agricultural University. My primary focus lies in the field of crop genomics and CRISPR genome editing, with an additional emphasis on integrating single-cell analysis methods alongside CRISPR techniques to investigate the intricate process of cotton somatic embryogenesis.
 
 
 Research Experience {data-icon=laptop}
@@ -342,18 +269,8 @@ print_section(position_data, 'education')
 ```
 
 
-
 Certificate {data-icon=book}
 --------------------------------------------------------------------------------
-
-::: aside
-![](figures/2022-highly-cited-researcher.png){width=100%}
-
-![](figures/2021-highly-cited-researcher.jpg){width=100%}
-
-![](figures/2020-highly-cited-researcher.png){width=100%}
-:::
-
 
 ```{r, results='asis', echo = FALSE}
 print_section(position_data, 'certificate')
@@ -369,6 +286,14 @@ print_section(position_data, 'award')
 ```
 
 
+Professional Skills {data-icon=wrench}
+--------------------------------------------------------------------------------
+
+
+```{r}
+print_section(position_data, 'professional_skills')
+```
+
 
 \pagebreak 
 
@@ -379,35 +304,6 @@ Grants  {data-icon=chart-line}
 ```{r}
 print_section(position_data, 'grant')
 ```
-
-
-Books {data-icon=book}
---------------------------------------------------------------------------------
-
-::: aside
-![](figures/treedata-jd-top1.jpg){width=100%}
-:::
-
-
-```{r}
-print_section(position_data, 'book_chapters')
-```
-
-
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'teaching_positions')
-```
-
-<div style="page-break-after: always; visibility: hidden"> 
-<!--  
-\pagebreak 
--->
-</div>
-
-
 
 
 Publications {data-icon=book}
