@@ -196,6 +196,7 @@ Contact {#contact}
 - <i class="fa fa-twitter"></i> hopetogy
 - <i class="fa fa-github"></i> github.com/tiramisutes
 - <i class="fa fa-link"></i> http://tiramisutes.github.io/
+- <i class="fa fa-home"></i> http://jinlab.hzau.edu.cn/
 - <i class="fa fa-phone"></i> +86-13296646985
 
 <br>
@@ -306,31 +307,25 @@ print_section(position_data, 'grant')
 ```
 
 
-Publications {data-icon=book}
+Publications (first author) {data-icon=book}
 --------------------------------------------------------------------------------
 
-
-
 ```{r}
-print_section(position_data, 'affliation')
+print_section(position_data, 'academic_articles_first')
 ```
 
 
-```{r}
-if(PDF_EXPORT){
-  cat("
-  
-Links {data-icon=link}
+Publications (corresponding author) {data-icon=book}
 --------------------------------------------------------------------------------
 
-
-
-")
-  
-  walk2(links, 1:length(links), function(link, index){
-    print(glue('{index}. {link}'))
-  })
-}
+```{r}
+print_section(position_data, 'academic_articles_corresponding')
 ```
 
 
+Publications (contributor) {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'academic_articles_contributor')
+```

@@ -60,7 +60,7 @@ p <- ggplot(cites, aes(cites, year)) +
     theme_transparent() +
     hexpand(.1)
 
-ggsave(p, file = "citation.png", width=3.5, height=4, bg = "transparent")
+ggsave(p, file = "citation.png", width=5, height=4, bg = "transparent")
 
 p2 <- p + labs(caption=paste0("data from Google Scholar, ", profile$date)) +
     theme(axis.text=element_text(size=15))
@@ -70,7 +70,7 @@ g <- as.ggplot(p2) +
         label=paste0("total cites = ", profile$total_cites, 
                     "\nh-index = ", profile$h_index), 
         size=6, hjust=1)
-ggsave(g, filename="../yulab-smu.github.io/static/images/citation.png",
+ggsave(g, filename="citation2.png",
         width=5, height=3)
 
 
