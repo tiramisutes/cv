@@ -310,26 +310,6 @@ Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 
-```{r}
-print_section(position_data, 'academic_articles')
-```
-
-
-
-Conference proceedings {data-icon=group}
---------------------------------------------------------------------------------
-
-
-
-```{r}
-print_section(position_data, 'presentation')
-```
-
-
-Professional affliations {data-icon=home}
---------------------------------------------------------------------------------
-
-
 
 ```{r}
 print_section(position_data, 'affliation')
